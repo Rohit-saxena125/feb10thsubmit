@@ -6,24 +6,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/LoginPage.css">
+    <!-- <link rel="stylesheet" href="../CSS/LoginPage.css"> -->
 </head>
 
 <body>
 
 
     <div id="Login">
-        <h3>Enter Credentials</h3>
-    <div>
-       
-        <input type="email" placeholder=" Email " name="email" onChange={inputEvent} className="box">
-        <input type="password" placeholder=" Password " name="password" onChange={inputEvent} className="box" />
+        <!-- login page customer -->
+        <div id="loginpage">
+            <div id="login">
+                <h2>Login</h2>
+                <form action="">
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button>Login</button>
+                </form>
+            </div>
+            <!-- forget password -->
+            <div id="forget">
+                <h2>Forget Password</h2>
+                <form action="">
+                    <input type="text" placeholder="Email">
+                    <button>Send</button>
+                </form>
+            </div>
     </div>
-    <br>
-    <button>Submit</button>
-</div>
+<!-- css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #Login {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loginpage {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #login form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login form input {
+            width: 100%;
+            height: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 0 1rem;
+        }
+
+        #login form button {
+            width: 100%;
+            height: 2rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #forget {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #forget h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #forget form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #forget form input {
+            width: 100%;
+            height: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 0 1rem;
+        }
+        </style>
+        <!-- script -->
+        <script>
+            const login = document.getElementById('login');
+            const forget = document.getElementById('forget');
+            const loginpage = document.getElementById('loginpage');
+            const loginbtn = document.getElementById('loginbtn');
+            const forgetbtn = document.getElementById('forgetbtn');
+
+            loginbtn.addEventListener('click', () => {
+                loginpage.style.left = '0';
+            });
+
+            forgetbtn.addEventListener('click', () => {
+                loginpage.style.left = '-50%';
+            });
+        </script>
+        
 
 </body>
-
 </html>
