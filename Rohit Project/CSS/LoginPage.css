@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(white,rgb(191, 195, 220));
+}
+
+
+
+#Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 300px;
+    box-shadow: greenyellow 2px 2px;
+}
