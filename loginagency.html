@@ -9,25 +9,33 @@
 <body>
     <div id = "login-agency">
         <form action="form.php" method="post">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email" required>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)" for="email">Email</label>
+            <input style="background-color:white;border-radius:5px;font-size:medium;" style="font-size: small;color:rgb(0, 0, 0)" type="email" name="email" id="email" placeholder="Enter your email" required>
+            <br>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)" for="password">Password</label>
+            <input style="background-color:white;border-radius:5px;font-size:medium;" type="password" name="password" id="password" placeholder="Enter your password" required>
             <br>
             <br>
-            <input type="submit" value="Submit">
+            <button style="width:100px;background-color:white;border-radius:5px;font-size:medium;font-weight:bold" >Submit</button>
         </form>
     </div>
     <style>
+        body{
+            margin: 0px;
+            
+        }
         #login-agency{
-            width: 100%;
+            
+            width: 95%;
             height: 100vh;
-            background-color: #f1f1f1;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            
         }
         #login-agency form{
+            
             width: 50%;
             height: 50%;
             background-color: #fff;
@@ -36,18 +44,17 @@
             justify-content: center;
             align-items: center;
             border-radius: 10px;
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px 0 rgba(118, 118, 118, 0.733);
         }
         #login-agency form label{
             width: 100%;
             height: 10%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             font-size: 1.5rem;
             font-weight: 500;
             color: #000;
-            margin: 0 0 0 10%;
         }
         #login-agency form input{
             width: 80%;
@@ -58,7 +65,6 @@
             font-size: 1.5rem;
             font-weight: 500;
             color: #000;
-            margin: 0 0 0 10%;
         }
     </style>
 </body>
