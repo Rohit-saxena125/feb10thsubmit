@@ -7,82 +7,72 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="customer-Signup">
+    <div id="Customer-Signup">
         <form action="form.php" method="post">
-            <label for="name">Name</label>
-            <input type="text" name="custname" id="name" placeholder="Enter your name" required>
-            <label for="email">Email</label>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)"  for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <br>
+            
+            <label style="font-weight: bold;color:rgb(75, 0, 0)"  for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Enter your email" required>
-            <label for="phone">Phone</label>
+            <br>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)"  for="phone">Phone</label>
             <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
-            <label for="password">Password</label>
+           <br>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)"  for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Enter your password" required>
-            <label for="confirm-password">Confirm Password</label>
+            <br>
+            <label style="font-weight: bold;color:rgb(75, 0, 0)"  for="confirm-password">Confirm Password</label>
             <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password" required>
-            <br>
-            <br>
-            <input type="submit" value="Submit">
+            <br><br>
+            <button style="width:100px;background-color:white;border-radius:5px;font-size:medium;font-weight:bold">Submit</button>
         </form>
+
     </div>
     <style>
-        #customer-Signup{
-            width: 100%;
-            height: 100vh;
-            background-color: #f1f1f1;
+        #Customer-Signup{
+        margin-top: 60px;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        #customer-Signup form{
-            width: 50%;
-            height: 50%;
-            background-color: #fff;
+        #Customer-Signup form{
+            width: 600px;
+            height: 80%;
+            background-color: #ffffff;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 10px;
             border-radius: 10px;
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+            padding: 10px;
         }
-        #customer-Signup form label{
-            width: 100%;
-            height: 10%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+        #Customer-Signup form label{
             font-size: 1.5rem;
             font-weight: 500;
             color: #000;
             margin: 0 0 0 10%;
         }
-        #customer-Signup form input{
+        #Customer-Signup form input{
             width: 80%;
             height: 10%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #000;
-            margin: 0 0 0 10%;
             border: none;
             border-bottom: 1px solid #000;
             outline: none;
+            font-size: 1.5rem;
         }
-        #customer-Signup form input[type="submit"]{
-            
-            width: 50%;
-            height: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #Customer-Signup form input[type="submit"]{
+
+            border: none;
+            outline: none;
             font-size: 1.5rem;
             font-weight: 500;
             color: #fff;
             background-color: #000;
-            border: none;
-            border-radius: 10px;
-            outline: none;
+            border-radius: 5px;
             cursor: pointer;
         }
     </style>
