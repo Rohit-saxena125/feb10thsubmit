@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link Bootstrap Css-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Link Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Link Custom Css-->
+    <link rel="stylesheet" href="index.css">
+    <title>Lux cars</title>
+</head>
+
+<body>
+
+    <!-- Navbar Section Start-->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a href="index.html" class="navbar-brand" data-aos="fade-right" data-aos-duration="2500"><span>L</span>ux Cars
+            </a>
+        <div>
+            <ul class="navbar-nav" data-aos="fade-left" data-aos-duration="2500">
+                <li class="nav-item"><a href="" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contactus.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <!--  -->
+        <div>
+            <ul class="navbar-nav">
+                <select name="Sign Up" class="nav-item" style="background: #ff0000;">
+                    <option value="" selected>Sign Up</option>
+                    <option value="customer" >Customer Sign Up</option>
+                    <option value="agency">Agency Sign Up</option>
+                </select>
+                <select name="login" class="nav-item" style="background: #ff0000;">
+                    <option value="">Login </option>
+                    <option value="customerlogin" >Customer Login</option>
+                    <option value="agencylogin">Agency Login</option>
+                </select>
+            </ul>
+        </div>
+        <!--  -->
+        </nav>
+    <!-- Navbar Section End-->
+<script>
+    // change the value of the selected option
+    document.querySelector('select[name="Sign Up"]').addEventListener('change', function(e) {
+        // get the selected option
+        var selectedOption = e.target.selectedOptions[0];
+        // get the value of the selected option
+        var selectedOptionValue = selectedOption.value;
+        // get the text of the selected option
+        var selectedOptionText = selectedOption.text;
+        // log the value and text of the selected option
+        console.log(selectedOptionValue, selectedOptionText);
+        if(selectedOptionValue == "agency"){
+            window.location.href = "signupagency.html";
+        }
+        else if(selectedOptionValue == "customer"){
+            window.location.href = "signupcustomer.html";
+        }
+    });
+    document.querySelector('select[name="login"]').addEventListener('change', function(e) {
+        // get the selected option
+        var selectedOption = e.target.selectedOptions[0];
+        // get the value of the selected option
+        var selectedOptionValue = selectedOption.value;
+        // get the text of the selected option
+        var selectedOptionText = selectedOption.text;
+        // log the value and text of the selected option
+        console.log(selectedOptionValue, selectedOptionText);
+        if(selectedOptionValue == "agencylogin"){
+            window.location.href = "loginagency.html";
+        }
+        else if(selectedOptionValue == "customerlogin"){
+            window.location.href = "logincustomer.html";
+        }
+    });
+
+</script>
+
+    <!--Header Section Start-->
+    <section>
+        <div class="container header">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="text-section">
+                        <h3><span>F</span>ind Your Best Ride With Us</h3>
+                        <span>Buying used luxury cars in India was never this easy. <br> <br> You can now own your dream luxury car in just 4 simple steps at Lux Cars, India's trusted used car portal.                        <div class="button-section">
+                            <a href="aboutus.html" class="btn" style="background: #4f0c48;">About</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <img src="img/header.png" alt="">
+                </div>
+            </div>
+            <div class="img-overlay"></div>
+        </div>
+    </section>
+    <!--Header Section End-->
+
+    <!-- Popular Car Section Start-->
+    <section>
+
+        <div class="popular container">
+            <!-- <div class="content">
+                <h5>Popular Cars Models</h5>
+                <a href="view_all/view_all.html">View All <i class="fas fa-arrow-right"></i></a>
+            </div> -->
+
+            <div class="row">
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\1.png" height="200px" width="200px" class="img-fluid" alt="image 1">
+                            <div class="box-content">
+                                <h6>Ferrari</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\2.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Chevrolet</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\3.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Range Rover</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\4.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Mercedes Benz</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- Row End -->
+
+            <div class="row">
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\5.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Mercedes SUV</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\6.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Lamborghini</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\7.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Audi S-Class</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="buycar.html">
+                    <div class="col-sm-3">
+                        <div class="box">
+                            <img src="img\header.png" height="200px" width="200px" class="img-fluid" alt="">
+                            <div class="box-content">
+                                <h6>Bugatti</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!-- Popular Car Section End-->
+
+    <!--Offers Section Start-->
+    <section>
+        <div class="offser-section container">
+            <div class="content">
+                <h5> Top Offers</h5>
+
+            </div>
+
+            <!-- Start -->
+            <div class="row justify-content-center">
+                <div class="col-sm-5">
+
+                    <div class="box">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img\1.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img\2.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div class="boxcontent">
+                            <h6>Ferrari</h6>
+                            <span>the sp51 is a beautiful, one-pff nod to the past that harnes the V12 performances of the 812 GTS.</span><br>
+                            <a href="buycar.html" class="btn btn-danger">Buy now</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="offset-sm-2 col-sm-5">
+
+                    <div class="box">
+                        <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img\4.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img\5.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls1" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div class="boxcontent">
+                            <h6>Mercedes Benz</h6>
+                            <span>The Mercedes A-Class has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 2143 cc</span><br>
+                            <a href="buycar.html" class="btn btn-danger">Buy now</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="last col-sm-5">
+
+                    <div class="box">
+                        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img\5.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img\6.png" height="250px" width="300px" class="d-block w-100"
+                                        alt="...">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls2" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div class="boxcontent">
+                            <h6>Mercedes SUV</h6>
+                            <span>The price of Mercedes-Benz GLS starts at Rs. 1.16 Cr and goes upto Rs. 2.47 Cr.</span><br>
+                            <a href="buycar.html" class="btn btn-danger">Buy now</a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!-- End -->
+        </div>
+    </section>
+    <!--Offers Section End -->
+
+    <!-- Latest Car Section Start-->
+    <section>
+        <div class="latest-section container">
+            <div class="content">
+                <h5>Latest Cars Models</h5>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="box">
+                        <img src="img\7.png" class="img-fluid" alt="">
+                        <div class="boxcontent">
+                            <h6>Audi S-Class</h6>
+                            <span>The Petrol engine is 2995 cc . It is available with Automatic transmission. And many more functions</span>
+                            <a href="buycar.html" type="submit" class="font-weight-bold btn btn-danger">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="box">
+                        <img src="img\header.png" class="img-fluid" alt="">
+                        <div class="boxcontent">
+                            <h6>Bugatti</h6>
+                            <span>The heart and soul of the Veyron is the 8.0-liter W16 engine with four turbochargers.</span>
+                            <a href="buycar.html" class="font-weight-bold btn btn-danger">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="box">
+                        <img src="img\2.png" class="img-fluid" alt="">
+                        <div class="boxcontent">
+                            <h6>Chevrolet</h6>
+                            <span>The expected Chevrolet Camaro specifications wouldinclude a 3.6-litre V6 engine.</span>
+                            <a href="buycar.html" type="submit" class="font-weight-bold btn btn-danger">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--Latest Car Section End -->
+
+    <!--Car Parts Section Start -->
+    
+
+    </section>
+    <!-- Testomonail Section Start -->
+    <!--  -->
+    <!-- Testomonail Section End -->
+    <!-- Footer Section Start-->
+    <footer>
+        <a href="">FreePrivacyPolicy © 2022. All rights reserved.<br><br>
+            Our Privacy Policy Our Terms of Use</a>
+    </footer>
+    <!-- Footer Section End-->
+</body>
+<!--Script For Bootstrap -->
+<script src="js/jquery.js"></script>
+<script src="js/pooper.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+
+<!--Custom Script Section Start-->
+<script>
+    //For Scroll
+    $(document).scroll(function () {
+        $(".navbar").toggleClass("scroll", $(this).scrollTop() > $(".navbar").height());
+    });
+
+</script>
+<!--Custom Script Section End-->
+</html>

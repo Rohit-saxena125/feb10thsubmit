@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========== Link Bootstrap Css =====-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!--=========== Link Font Awesome ======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--========== Link Custom Css  ===============-->
+    <link rel="stylesheet" href="index.css">
+    <title>Lux Cars</title>
+</head>
+
+<body class="about_us_page">
+
+    <!--================== Navbar Section Start ==================-->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a href="index.html" class="navbar-brand" data-aos="fade-right" data-aos-duration="2500"><span>L</span>ux Car</a>
+        <div>
+            <ul class="navbar-nav" data-aos="fade-left" data-aos-duration="2500">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="contactus.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <!--  -->
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="sellCar.html" class="ml-3 nav-link btn" style="background: #ff0000;">Sell
+                        Car -</a></li>
+                <li class="nav-item"><a href="buycar.html" class="ml-3 nav-link btn" style="background: #ff0000;">Buy
+                        Car +</a></li>
+            </ul>
+        </div>
+        <!--  -->
+
+    </nav>
+    <!--================== Navbar Section End ==================-->
+
+    <!-- About Main Section Start -->
+    <section>
+        <div class="about_us_main_page container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img src="/img/1.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="offset-sm-2 col-sm-5">
+                    <h6>About Us <span></span></h6>
+                    <p>We all like having fancy cars, Lux Cars will help you to connect with other like-minded people who are selling or buying these super sporty or luxurious cars.<br><br> Lux Cars helps car enthusiasts like you to sell and buy their cars as they want. We work continuously to make your experience smoother than ever. <br><br> Lux Cars connects you directly to buyers leading you to a safe and verified car purchase. <br> <br>
+                    </p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- About Main Section End -->
+
+
+
+
+
+    <!-- About Us Section Start -->
+
+    <!-- About Us Section End -->
+
+
+    <footer>
+        <a href="">FreePrivacyPolicy © 2022. All rights reserved.<br><br>
+            Our Privacy Policy Our Terms of Use</a>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--========= Script For Bootstrap =======-->
+    <script src="js/jquery.js"></script>
+    <script src="js/pooper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+<script>
+    //For Scroll
+    $(document).scroll(function () {
+        $(".navbar").toggleClass("scroll", $(this).scrollTop() > $(".navbar").height());
+    });
+
+</script>
+
+</html>
