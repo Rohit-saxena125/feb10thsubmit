@@ -1,37 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id ="add-new-car">
-        <h1> Add new car</h1>
-        <form action="addcars.php" method="post">
-            <label for="model">Model</label>
-            <input type="text" name="model" id="model" required>
-            <label for="number">Number</label>
-            <input type="text" name="number" id="number" required>
-            <label for="seating">Seating</label>
-            <input type="text" name="seating" id="seating" required>
-            <label for="rent">Rent</label>
-            <input type="text" name="rent" id="rent" required>
-            <input type="submit" value="Add">
-        </form>
-    </div>
+<html>
+  <head>
+    <title>Add New Cars</title>
+  </head>
+  <body>
+    <h1>Add New Cars</h1>
+    <form action="" method="post">
+      <label for="vehicle_model">Vehicle Model:</label>
+      <input type="text" id="vehicle_model" name="vehicle_model">
+      <br><br>
+      <label for="vehicle_number">Vehicle Number:</label>
+      <input type="text" id="vehicle_number" name="vehicle_number">
+      <br><br>
+      <label for="seating_capacity">Seating Capacity:</label>
+      <input type="number" id="seating_capacity" name="seating_capacity">
+      <br><br>
+      <label for="rent_per_day">Rent per Day:</label>
+      <input type="number" id="rent_per_day" name="rent_per_day">
+      <br><br>
+      <input type="submit" value="Add Car">
+    </form>
+    <!-- css -->
     <style>
-        #add-new-car{
-            width: 50%;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid black;
-            border-radius: 10px;
+      body {
+        background-color: #f2f2f2;
+      }
+      h1 {
+        text-align: center;
+        color: #4CAF50;
+      }
+      form {
+        border: 3px solid #f1f1f1;
+        width: 50%;
+        margin: auto;
+      }
+      input[type=text],
+      input[type=password],
+      input[type=number] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+      }
+      img.avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      .container {
+        padding: 16px;
+      }
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
         }
-        #add-new-car input{
-            margin: 10px;
+        .cancelbtn {
+          width: 100%;
         }
+      }
     </style>
-</body>
+    <?php
+    <!-- // Connect to the database -->
+    $db = mysqli_connect("localhost:3306", "root", "", "test");
+    
+    <!-- // Check if the database connection was successful -->
+    if (!$db) {
+      exit("Failed to connect to the database: " . mysqli_connect_error());
+    }
+    // add cars only accessed by admin
+     if (!isset($_SESSION['user_id'])) {
+      header("Location: loginagency.php");
+      exit();
+     }
+    <!-- // Get the form data -->
+    $vehicle_model = $_POST['vehicle_model'];
+    $vehicle_number = $_POST['vehicle_number'];
+    $seating_capacity = $_POST['seating_capacity'];
+    $rent_per_day = $_POST['rent_per_day'];
+    
+    <!-- // Insert the new car into the database -->
+    $query = "INSERT INTO addcar (vehiclemodel, vehiclenumber, seatingcapcity, rent)
+              VALUES ('$vehicle_model', '$vehicle_number', '$seating_capacity', '$rent_per_day')";
+    $result = mysqli_query($db, $query);
+    
+    <!-- // Check if the query was successful -->
+    if (!$result) {
+      exit("SQL query failed: " . mysqli_error($db));
+    }
+    
+    <!-- // Redirect the user to the list of cars -->
+    header("Location: viewbook.php");
+    exit;
+    ?>
+  </body>
 </html>
